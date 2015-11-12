@@ -98,6 +98,7 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </sections>
 
@@ -190,7 +191,35 @@
             </div>
         </footer>
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog">
+            <h2>Расскажите нам о вашем проекте</h2>
+            <p>Коротко опишите ваши идеи или просто прикрепите файл с готовым ТЗ.<br> 
+Мы свяжемся с вами в течении 1 дня и расскажем о том, как мы  можем вам помочь</p>
+
+            <form action="#">
+                <div>
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel">
+                </div> 
+                <div>
+                    <label for="name">E-mail</label>
+                    <input type="email" name="email" id="email">
+                </div> 
+                <div>
+                    <label for="name">Краткое описание вашего проекта</label>
+                    <textarea></textarea>
+                </div> 
+
+                <button type="submit">
+                    Отправить
+                </button>
+            </form>
+
+        </div>
 
         <script src="js/vendor/modernizr.js"></script>
         <script src="js/vendor/jquery-1.11.3.min.js"></script>

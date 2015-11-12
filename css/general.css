@@ -289,7 +289,7 @@ header                     {
                                height: 235px;
                                width: 460px;
                                position: relative;
-                               margin: 30px 30px 30px 0;
+                               margin: 30px 30px 0px 0;
                                padding: 30px 20px;
                                background: #E6E4E4;
                                cursor: pointer;
@@ -416,3 +416,68 @@ footer .wrapper           { text-align: left;}
 .footer-info .social      { float: right; margin-top: 15px;}
 
 .copy p                   { color: #535c65; font: 13px 'open_sanssemibold';}
+
+
+
+
+/* --------------------------------------
+   popup
+   -------------------------------------- */
+       
+.mfp-hide                          { display: block !important }
+#modal-popup                       {
+                                       width: 750px;
+                                       padding: 35px 90px;
+                                       background: #373D44 url(../images/popupBg.jpg);
+                                       background-repeat: no-repeat;
+                                       -webkit-background-size: cover;
+                                       -o-background-size: cover;
+                                       background-size: cover;
+                                   }
+#modal-popup h2                    {
+                                       font: 36px 'open_sanslight';
+                                       color: #FFF;
+                                       text-align: center;
+                                   }
+#modal-popup p                     {
+                                       font: 14px 'open_sanslight';
+                                       color: #FFF;
+                                       text-align: center;
+                                       margin: 25px 0;
+                                   }
+#modal-popup label                 {
+                                       font: 14px 'open_sanslight';
+                                       color: #FFF;
+                                       display: block;
+                                   }
+#modal-popup input                 {
+                                       border: 1px solid #7F8994;
+                                       width: 100%;
+                                       height: 33px;
+                                       margin-bottom: 15px;
+                                       background: transparent;
+                                   }
+#modal-popup textarea              {
+                                       background: transparent;
+                                       border: 1px solid #7F8994;
+                                       width: 100%;
+                                       height: 130px;
+                                   }
+#modal-popup form div              { display: inline-block }
+#modal-popup form div:nth-child(1) { width: 100% }
+#modal-popup form div:nth-child(2) {
+                                       width: 45%;
+                                       margin-right: 9%;
+                                   }
+#modal-popup form div:nth-child(3) { width: 45% }
+#modal-popup form div:nth-child(4) { width: 60% }
+#modal-popup button                {
+                                       display: block;
+                                       margin: 20px auto;
+                                       background: #00BFF3;
+                                       color: #fff;
+                                       width: 200px;
+                                       height: 33px;
+                                       font: 14px 'open_sanslight';
+                                       border: none;
+                                   }
