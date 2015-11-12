@@ -314,8 +314,8 @@ header                     {
                                color: #000;
                            }
 .product:hover .grayscale  {
-                               -webkit-filter: grayscale();
-                               filter: grayscale();
+                               -webkit-filter: grayscale(0);
+                               filter: grayscale(0);
                            }
 .dowloadProduct            {
                                position: absolute;
@@ -405,7 +405,3 @@ footer .wrapper           { text-align: left;}
 .footer-info .social      { float: right; margin-top: 15px;}
 
 .copy p                   { color: #535c65; font: 13px 'open_sanssemibold';}
-
-
-
->>>>>>> ec4ad1b53ac271bc8aebef981b0a315eee96f824
