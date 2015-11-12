@@ -321,12 +321,19 @@ header                     {
                                background: #fff;
                                color: #000;
                            }
-.product .grayscale.opacity         {    opacity: 0.3;}
+.product .grayscale.opacity         {    opacity: 0.3;
+-webkit-transition: all 1;
+   -moz-transition: all 1;
+    -ms-transition: all 1;
+     -o-transition: all 1;
+        transition: all 1;
+}
 .product:nth-child(1) .grayscale    {   opacity: 0.8;}
 .product:hover .grayscale  {
                                -webkit-filter: grayscale(0);
                                filter: grayscale(0);
-                               opacity: 1;}
+                               opacity: 1;
+                            }
 
 .dowloadProduct            {
                                position: absolute;
