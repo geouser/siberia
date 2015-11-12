@@ -164,6 +164,8 @@ h3   {font: 14px 'open_sansbold'; text-transform: uppercase; text-align: left;}
 }
 
 .grayscale  {
+    -webkit-filter: grayscale(1);
+filter: grayscale(1);
 -webkit-transition: all .3;
    -moz-transition: all .3;
     -ms-transition: all .3;
