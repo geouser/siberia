@@ -115,6 +115,7 @@ $('.dowloadProduct').mouseover(function(){
 $('.dowloadProduct').mouseout(function(){
   $(this).css('top', '200%');
 });
+
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
     type: 'inline',
