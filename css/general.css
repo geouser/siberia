@@ -384,13 +384,30 @@ header                     {
 /* --------------------------------------
    contancts
    -------------------------------------- */
-.contacts .left           { width: 50%; float: left; text-align: left;}
-.contacts .right          { width: 50%; float: right;}
+.contacts .left           { width: 60%; float: left; text-align: left; margin-bottom: 67px; padding-left: 100px;}
+.contacts .right          { width: 40%; float: right; text-align: left; margin-top: 85px; padding-left: 100px;}
 
 .contacts h2              { font: 36px 'open_sanssemibold'; color: #000; margin-bottom: 35px;}
+.contacts .left           { font: 21px 'open_sanslight';}
 
-.contacts .lang           { text-align: center; background-color: #f4f4f4;}
+.contacts .right .mail a  { color: #00aeef; font: 21px 'open_sanssemibold'; text-decoration: underline;}
+.contacts .right p        { font: 18px 'open_sansregular'}
+.contacts .right .telephone a { font-family: 'open_sanssemibold'}
+.contacts .right address  {display: inline-block; font: 18px 'open_sansregular';}
 
+.contacts .right p,
+.contacts .right address  { line-height: 36px;}
+
+
+.contacts .map            { height: 400px; background-color: #ccc;}
+
+
+
+.contacts .lang           { text-align: center;
+                            background-color: #f4f4f4;
+                            padding: 40px 0;}
+.contacts .lang img       { margin-bottom: 40px;}
+.contacts .lang p         { font: 18px 'open_sanslight';}
 
 
 /* --------------------------------------
