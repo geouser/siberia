@@ -441,10 +441,10 @@ footer .wrapper           { text-align: left;}
    popup
    -------------------------------------- */
        
-.mfp-hide                          { display: block !important }
 #modal-popup                       {
                                        width: 750px;
                                        padding: 35px 90px;
+                                       margin: 0 auto;
                                        background: #373D44 url(../images/popupBg.jpg);
                                        background-repeat: no-repeat;
                                        -webkit-background-size: cover;
@@ -488,7 +488,7 @@ footer .wrapper           { text-align: left;}
                                    }
 #modal-popup form div:nth-child(3) { width: 45% }
 #modal-popup form div:nth-child(4) { width: 60% }
-#modal-popup button                {
+#modal-popup button[type="submit"] {
                                        display: block;
                                        margin: 20px auto;
                                        background: #00BFF3;
