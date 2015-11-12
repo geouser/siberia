@@ -66,9 +66,13 @@ $('.responsive').slick({
   dots: false,
   autoplay: true,
   infinite: false,
-  speed: 300,
+  speed: 12000,
+  arrows: false,
+  pauseOnHover: true,
+  autoplaySpeed: 1,
   slidesToShow: 12,
   slidesToScroll: 4,
+  cssEase: 'linear',
   responsive: [
     {
       breakpoint: 1400,
@@ -119,7 +123,7 @@ $('.dowloadProduct').mouseout(function(){
     fixedBgPos: true,
 
     overflowY: 'auto',
-    modal: true,
+    modal: false,
 
     closeBtnInside: true,
     preloader: false,

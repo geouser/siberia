@@ -307,6 +307,21 @@ display: inline-block;}
 
 
 /*---------------------------------------------------------------*/
+/* --------------------------------------
+   contancts
+   -------------------------------------- */
+.contacts .left           { width: 50%; float: left; text-align: left;}
+.contacts .right          { width: 50%; float: right;}
+
+.contacts h2              { font: 36px 'open_sanssemibold'; color: #000; margin-bottom: 35px;}
+
+.contacts .lang           { text-align: center; background-color: #f4f4f4;}
+
+
+
+/* --------------------------------------
+   footer
+   -------------------------------------- */
 footer                    { background-image: url(../images/footer-bg.jpg);
                             background-size: cover;
                             background-repeat: no-repeat;
