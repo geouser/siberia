@@ -131,7 +131,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 
 .wrapper                      {    margin: 0 auto;
                                    text-align: center;
-                                   width: 1200px;}
+                                   width: 1140px;}
  
 .col-1                        {    width: 100%;}
 .col-2                        {    width: 50%;}
@@ -169,7 +169,23 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
    -------------------------------------- */
 
 
-
-
-
+/* --------------------------------------
+   Offer
+   -------------------------------------- */
+.offer {background-image: url(../images/offerBg.jpg);
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   -webkit-background-size: cover;
+        -o-background-size: cover;
+           background-size: cover;
+   height: 100vh;
+   }
+.logo       {display: inline-block;}
+.offer nav  {list-style-type: none; display: inline-block;}
+.offer nav li {display: inline-block;}
+.offer>.wrapper {height: 100%;}
+.offer h1 {font: 48px 'open_sanslight'; 
+    width: 750px;
+    display: inline-block; vertical-align: middle;
+}
 /*---------------------------------------------------------------*/
