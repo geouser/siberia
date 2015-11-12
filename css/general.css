@@ -173,3 +173,23 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 
 
 /*---------------------------------------------------------------*/
+footer                    { background-image: url(../images/footer-bg.jpg);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                            padding: 27px 0 35px;
+                            text-align: left;}
+footer .wrapper           { text-align: left;}
+
+.footer-info              { margin-bottom: 33px;}
+.footer-info .swa-logo    { float: left; margin-right: 35px;}
+.footer-info p            { display: inline-block;
+                            width: 450px;
+                            color: #fff;
+                            font: 15px 'open_sanslight';
+                            margin-top: 15px;}
+.footer-info p a          { color: #00bff3; text-decoration: underline;}
+.footer-info p img        { margin-top: 5px;}
+.footer-info .social      { float: right; margin-top: 15px;}
+
+.copy p                   { color: #535c65; font: 13px 'open_sanssemibold';}
