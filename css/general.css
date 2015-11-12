@@ -1,4 +1,4 @@
-﻿/* --------------------------------------
+/* --------------------------------------
    Global Styles
    -------------------------------------- */
   /*Custom fonts*/
@@ -152,9 +152,11 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 h2   {font: 24px 'open_sanslight'; color: #000;}
 h3   {font: 14px 'open_sansbold'; text-transform: uppercase; text-align: left;}
 
-@media (max-width: 1250px) {
+@media (max-width: 1160px) {
+    .wrapper    {width: 95%;}
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+    .wrapper.min {width: 95%;}
 }
 @media (max-width: 660px) {
 }
@@ -213,7 +215,7 @@ header                     {
                                padding: 20px 0;
                            }
 .logo                      {
-                               display: inline-block;
+                               display: inline-block; vertical-align: middle;
                                width: 280px;
                            }
 .offer nav                 {
@@ -221,6 +223,7 @@ header                     {
                                display: inline-block;
                                width: 850px;
                                text-align: right;
+                               vertical-align: middle;
                            }
 .offer nav li              {    display: inline-block }
 .offer nav li a            {
@@ -235,7 +238,6 @@ header                     {
                                font: 13px 'open_sansbold';
                                color: #FFF;
                                text-decoration: none;
-                               margin-right: 40px;
                                background: transparent;
                                border: 2px solid #fff;
                                cursor: pointer;
@@ -258,6 +260,40 @@ header                     {
                                vertical-align: middle;
                                color: #FFF;
                            }
+
+@media (max-width: 1160px) {
+    .logo                  {    width: 29%;}
+    .offer nav             {    width: 70%;}
+    .offer h1              {    width: 80%;}
+}
+
+@media (max-width: 900px) {
+    .logo  img             {    width: 90%; height: auto;}
+    .offer nav li a        {    margin-right: 10px;}
+}
+@media (max-width: 700px) {
+    .offer nav li a        {    margin: 0 0 0 30px;}
+    .offer nav button      {    margin-top: 10px; display: block; float: right;}
+    .offer h1              {    font-size: 38px;}
+    .logo  img             {    width: 100%;}
+}
+@media (max-width: 500px) {
+    header                 {    padding: 5px 0 0 0;}
+    .offer nav             {    width: 100%; text-align: center;}
+    .offer nav li a        {    margin: 0 0 0 10px;}
+    .offer nav li:nth-child(1) a {margin-left: 0;}
+    .offer nav button      {    border: 1px solid #fff; float: none; display: inline-block; margin: 0 0 0 5px; padding: 0 5px;}
+    .offer h1              {    width: 90%;}
+    .logo                  {    width: 50%; margin-bottom: 10px;}
+}
+
+@media (max-width: 400px) {
+    .offer nav li a        {    font-size: 16px; margin: 0 5px; font-family: 'open_sanslight'; font-weight: 700;}
+    .offer nav li:nth-child(1) a {margin: 0 5px;}
+    .offer nav button      {    margin-top: 10px; padding: 0 10px; font-family: 'open_sanslight'; font-weight: 700;}
+    .offer h1              {    font-size: 28px; padding-top: 40px;}
+}
+
 /* --------------------------------------
    platform
    -------------------------------------- */
@@ -276,6 +312,13 @@ header                     {
                                margin-right: 95px;
                            }
 .platform ul li:last-child {    margin-right: 0 }
+
+
+@media (max-width: 500px) {
+    .platform ul li            {margin-right: 25px;}
+    .platform                  {padding: 40px 0;}
+}
+
 /* --------------------------------------
    products
    -------------------------------------- */
@@ -355,8 +398,40 @@ header                     {
                            }
 .dowloadProduct a img      {    margin: 0 }
 
+@media (max-width: 1100px) {
+    .product               {    background: #34B5E5 !important; color: #FFF !important;}
+    .product:hover         {    background: #34B5E5 !important;}
+    .product .grayscale  {
+                               -webkit-filter: grayscale(0) !important;
+                               filter: grayscale(0) !important;
+                               opacity: 1 !important;
+                            }
+}
+@media (max-width: 1000px) {
+    .product              {     width: 350px; height: 200px; padding: 20px 5px; margin: 20px 10px 0 0;}
+    .product span         {     width: 180px; font-size: 18px;}
+    .product img          {     max-width: 120px;}
+}
+@media (max-width: 760px) {
+    .products             {     padding: 40px 0;}
+    .product              {     display: block; width: 350px; height: 200px; 
+                                padding: 20px 5px; margin: 20px auto;
+                          }
+    .product:nth-child(2n){    margin: 20px auto;}
+    .product span         {     width: 180px; font-size: 18px;}
+    .product img          {     max-width: 120px;}
+    .product .dowloadProduct img   {     max-width: 160px;}
+    .dowloadProduct       {     padding: 5px;}
+}
+@media (max-width: 400px) {
+    .product              {     width: 100%;}
+    .product img          {     max-width: 100px;}
+    .product span         {     width: 160px;}
+}
+
+
 /* --------------------------------------
-   products
+   Clients
    -------------------------------------- */
 .clients                   {    padding: 70px 0 }
 .responsive                {    margin: 45px 0 }
@@ -372,19 +447,10 @@ header                     {
                                margin: 0 5px;
                            }
 
-/* --------------------------------------
-   Clients
-   -------------------------------------- */
-.clients                 {padding: 70px 0;}
-.responsive              {margin: 45px 0;}
-.responsive .slick-track {overflow: hidden;
-                         white-space: nowrap;
-                         display: inline-block;
-                         }
-.responsive img         {max-width: 100%;}
-.responsive .slide      {text-align: center; min-width: 150px; margin: 0 5px;}
-
-
+@media (max-width: 800px) {
+    .responsive .slide         {max-width: 150px;}
+    .clients                   {padding: 50px 0 }
+}
 
 
 /*---------------------------------------------------------------*/
@@ -416,7 +482,31 @@ header                     {
 .contacts .lang img       { margin-bottom: 40px;}
 .contacts .lang p         { font: 18px 'open_sanslight';}
 
+@media (max-width: 1150px) {
+   .contacts .left        { padding-left: 0;}
+   .contacts .right       { padding-left: 10px;}
+}
 
+@media (max-width: 900px) {
+   .contacts .left        { font-size: 18px;}
+   .contacts h2           { font-size: 28px;}
+   .contacts .right p,
+   .contacts .right address {font-size: 16px; line-height: 24px;}
+}
+@media (max-width: 800px) {
+   .contacts .left        { font-size: 14px;}
+   .contacts .right       { padding-left: 0;}
+   .contacts .right p,
+   .contacts .right address {font-size: 14px; line-height: 22px;}
+}
+@media (max-width: 760px) {
+   .contacts .left        { width: 100%; text-align: center; margin-bottom: 20px;}
+   .contacts .right       { width: 100%; margin-top: 20px; text-align: center; margin-bottom: 20px;}
+   .contacts .left        { font-size: 16px;}
+   .contacts .right p,
+   .contacts .right address {font-size: 16px; line-height: 26px;}
+   .contacts h2           { margin-bottom: 10px;}
+}
 /* --------------------------------------
    footer
    -------------------------------------- */
@@ -441,7 +531,9 @@ footer .wrapper           { text-align: left;}
 
 .copy p                   { color: #535c65; font: 13px 'open_sanssemibold';}
 
-
+@media (max-width: 500px) {
+   .footer-info p         { width: 100%;}
+}
 
 
 /* --------------------------------------
