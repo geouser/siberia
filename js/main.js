@@ -62,7 +62,55 @@ $(function(){
 
 jQuery(document).ready(function($) {
 
+$('.responsive').slick({
+  dots: false,
+  autoplay: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 12,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 8,
+        slidesToScroll: 3,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 850,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 550,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 6
+      }
+    }
+  ]
+});
 
+$('.product').click(function(){
+  $(this).children('.dowloadProduct').css('top', '0');
+});
+$('.dowloadProduct').mouseover(function(){
+  $(this).css('top', '0%');
+});
+$('.dowloadProduct').mouseout(function(){
+  $(this).css('top', '200%');
+});
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
     type: 'inline',
