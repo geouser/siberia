@@ -581,7 +581,7 @@ footer .wrapper           { text-align: left;}
                                        height: 130px;
                                        resize: none
                                    }
-#modal-popup #dropzone             { margin-top: 24px; width: 30%; float: right; height: 130px; border: 1px dotted #7F8994;}
+#modal-popup #dropzone             { text-align: center; margin-top: 24px; width: 30%; float: right; height: 130px; border: 1px dotted #7F8994;}
 .dropzone .dz-message span         { font: 11px 'open_sansregular'; color: #535b65; display: inline-block;}
 .dropzone .dz-message img          { display: block; margin: 0 auto 10px;}
 .dropzone .dz-preview.dz-image-preview {background: transparent;}

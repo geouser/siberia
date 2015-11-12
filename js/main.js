@@ -144,21 +144,28 @@ $('.dowloadProduct').mouseout(function(){
   }
 
   var maxSize = 5;
+  var uploadedFile;
   Dropzone.autoDiscover = false;
+
   $("#dropzone").dropzone({
-    url: "index.html",
+    url: "forms.php",
     paramName: "file", // The name that will be used to transfer the file
     maxFilesize: maxSize, // MB
     maxFiles: 1,
     uploadMultiple: false,
     maxFiles: 1,
+    autoProcessQueue: false,
     accept: function(file, done) {
       done();
+      uploadedFile = file;
     },
     init: function() {
+      var myDropzone = this;
+
       this.on("maxfilesexceeded", function(file) {
             this.removeAllFiles();
             this.addFile(file);
+            uploadedFile = file;
       });
       this.on("addedfile", function(file) {
       if (file.size > maxSize*1024000){
@@ -167,9 +174,41 @@ $('.dowloadProduct').mouseout(function(){
         }
       });
 
+      $(".submit").on('click', function(e) {
+           e.preventDefault();
+           e.stopPropagation();
+           myDropzone.processQueue();
+        });
 
-    }
-  });
+      myDropzone.on("sending", function(file, xhr, formData) {
+        // Will send the filesize along with the file as POST data.
+        formData.append('name', $('input[name="name"]').val());
+        formData.append('tel', $('input[name="tel"]').val());
+        formData.append('email', $('input[name="email"]').val());
+        formData.append('msg', $('textarea[name="msg"]').val());
+      });
+
+      myDropzone.on("complete", function(file, responseText) {
+        $.magnificPopup.close();
+        this.removeAllFiles();
+        $('form').each(function(index, el) {
+          $(this)[0].reset();
+        });
+
+       });
+
+    } // init end
+  }); // dropzone end
+
+
+  /*$('form').on('submit', function(event) {
+    event.preventDefault();
+
+
+    var data = $(this).serialize();
+    console.log(data);
+    console.log(uploadedFile);
+  });*/
 
 
   

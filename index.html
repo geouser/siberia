@@ -38,7 +38,7 @@
                         <li><a href="">Программы</a></li>
                         <li><a href="">Клиенты</a></li>
                         <li><a href="">Контакты</a></li>
-                        <button>
+                        <button class="magnific" href="#modal-popup">
                             Заказать приложение
                         </button>
                     </nav>
@@ -195,7 +195,7 @@
             <h2>Расскажите нам о вашем проекте</h2>
             <p>Коротко опишите ваши идеи или просто прикрепите файл с готовым ТЗ. <br>Мы свяжемся с вами в течении 1 дня и расскажем о том, как мы  можем вам помочь</p>
 
-            <form action="#">
+            <form action="#" class="dropzone">
                 <div>
                     <label for="name">Ваше имя</label>
                     <input type="text" name="name" id="name">
@@ -210,15 +210,15 @@
                 </div> 
                 <div>
                     <label for="name">Краткое описание вашего проекта</label>
-                    <textarea></textarea>
+                    <textarea name="msg"></textarea>
                 </div> 
-                <div id="dropzone" class="dropzone vertical">
+                <div id="dropzone" class="vertical">
                     <div class="dz-default dz-message">
                         <img src="images/upload.png" alt="">
                         <span>Нажмите или перетащите файл</span>
                     </div>
                 </div>
-                <button type="submit">
+                <button type="submit" class="submit">
                     Отправить
                 </button>
             </form>
