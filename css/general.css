@@ -120,7 +120,7 @@ strong                        {    font-weight: 900;}
 ul                            {    padding: 0;}
 *                             {    box-sizing: border-box; outline: none;}
 *:focus                       {    outline: none;}
-::-moz-focus-inner            {    border:0;}
+*::-moz-focus-inner           {    border:0;}
 .clearfix:after               {    content: " "; 
                                    visibility: hidden;
                                    display: block;
@@ -440,7 +440,7 @@ footer .wrapper           { text-align: left;}
 /* --------------------------------------
    popup
    -------------------------------------- */
-       
+.mfp-close-btn-in .mfp-close       {   color: #fff;}       
 #modal-popup                       {
                                        width: 750px;
                                        padding: 35px 90px;
