@@ -70,7 +70,53 @@ $(function(){
 
 jQuery(document).ready(function($) {
 
+<<<<<<< HEAD
 
+=======
+$('.responsive').slick({
+  dots: false,
+  autoplay: true,
+  infinite: false,
+  speed: 3000,
+  arrows: true,
+  pauseOnHover: true,
+  autoplaySpeed: 5000,
+  slidesToShow: 12,
+  slidesToScroll: 4,
+  cssEase: 'linear',
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 8,
+        slidesToScroll: 3,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 850,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 550,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4
+      }
+    }
+  ]
+});
+>>>>>>> aefabc450ffe64061e8da4406697cf79c2769d0b
 
 $('.product').click(function(){
   $(this).children('.dowloadProduct').css('top', '0');
@@ -184,14 +230,33 @@ $(function() {
   }); // dropzone end
 
 
-  /*$('form').on('submit', function(event) {
-    event.preventDefault();
+  function googleMap_initialize() {
 
+      var mapCenterCoord = new google.maps.LatLng(56.011893, 92.873528);
+      var mapMarkerCoord = new google.maps.LatLng(56.011893, 92.873528);
 
-    var data = $(this).serialize();
-    console.log(data);
-    console.log(uploadedFile);
-  });*/
+      var mapOptions = {
+        center: mapCenterCoord,
+        zoom: 17,
+        //draggable: false,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var markerImage = new google.maps.MarkerImage('images/blue-marker.svg');
+      var marker = new google.maps.Marker({
+        icon: markerImage,
+        position: mapMarkerCoord, 
+        map: map,
+        title:"Siberian Wild Apps"
+      });
+      $(window).resize(function (){
+        map.setCenter(mapCenterCoord);
+      });
+  };
+  googleMap_initialize();
 
 
   
