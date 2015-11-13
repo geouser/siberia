@@ -70,7 +70,7 @@ $(function(){
 
 jQuery(document).ready(function($) {
 
-
+$('.clients-slider ul img').addClass('grayscale');
 
 $('.product').click(function(){
   $(this).children('.dowloadProduct').css('top', '0');
