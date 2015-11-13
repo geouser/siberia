@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="js/slick/slick.css">
         <link rel="stylesheet" href="js/slick/slick-theme.css">
         <link rel="stylesheet" href="css/gray.min.css">
-
+        <link rel="stylesheet" href="css/dropzone.css">
         <link rel="stylesheet" href="css/magnific-popup.css">
 
         <link rel="stylesheet" href="css/normalize.min.css">
@@ -193,8 +193,7 @@
 
         <div id="modal-popup" class="mfp-hide zoom-anim-dialog">
             <h2>Расскажите нам о вашем проекте</h2>
-            <p>Коротко опишите ваши идеи или просто прикрепите файл с готовым ТЗ.<br> 
-Мы свяжемся с вами в течении 1 дня и расскажем о том, как мы  можем вам помочь</p>
+            <p>Коротко опишите ваши идеи или просто прикрепите файл с готовым ТЗ. <br>Мы свяжемся с вами в течении 1 дня и расскажем о том, как мы  можем вам помочь</p>
 
             <form action="#">
                 <div>
@@ -213,7 +212,12 @@
                     <label for="name">Краткое описание вашего проекта</label>
                     <textarea></textarea>
                 </div> 
-
+                <div id="dropzone" class="dropzone vertical">
+                    <div class="dz-default dz-message">
+                        <img src="images/upload.png" alt="">
+                        <span>Нажмите или перетащите файл</span>
+                    </div>
+                </div>
                 <button type="submit">
                     Отправить
                 </button>
@@ -231,6 +235,7 @@
 
         <script src="js/slick/slick.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/dropzone.js"></script>
         <script src="js/jquery.gray.min.js"></script>
 
         <script src="js/main.js"></script>

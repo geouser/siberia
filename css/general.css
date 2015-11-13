@@ -146,7 +146,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 .vertical:before              {    content: " "; 
                                    display: inline-block; vertical-align: middle; 
                                    height: 100%;
-                                   margin-right: 0;
+                                   margin-right: -4px;
                               }
 
 h2   {font: 24px 'open_sanslight'; color: #000;}
@@ -576,6 +576,7 @@ footer .wrapper           { text-align: left;}
                                        font: 14px 'open_sanslight';
                                        color: #FFF;
                                        display: block;
+                                       margin-bottom: 5px;
                                    }
 #modal-popup input                 {
                                        border: 1px solid #7F8994;
@@ -589,15 +590,23 @@ footer .wrapper           { text-align: left;}
                                        border: 1px solid #7F8994;
                                        width: 100%;
                                        height: 130px;
+                                       resize: none
                                    }
-#modal-popup form div              { display: inline-block }
-#modal-popup form div:nth-child(1) { width: 100% }
-#modal-popup form div:nth-child(2) {
+#modal-popup #dropzone             { margin-top: 24px; width: 30%; float: right; height: 130px; border: 1px dotted #7F8994;}
+.dropzone .dz-message span         { font: 11px 'open_sansregular'; color: #535b65; display: inline-block;}
+.dropzone .dz-message img          { display: block; margin: 0 auto 10px;}
+.dropzone .dz-preview.dz-image-preview {background: transparent;}
+
+
+
+#modal-popup form > div              { display: inline-block }
+#modal-popup form > div:nth-child(1) { width: 100% }
+#modal-popup form > div:nth-child(2) {
                                        width: 45%;
                                        margin-right: 9%;
                                    }
-#modal-popup form div:nth-child(3) { width: 45% }
-#modal-popup form div:nth-child(4) { width: 60% }
+#modal-popup form > div:nth-child(3) { width: 45% }
+#modal-popup form > div:nth-child(4) { width: 65% }
 #modal-popup button[type="submit"] {
                                        display: block;
                                        margin: 20px auto;

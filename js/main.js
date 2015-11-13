@@ -31,7 +31,7 @@ $(window).on('load', function(){
   }, 500);
 });
 
-// ������� Internet Explorer?
+// Áðàóçåð Internet Explorer?
 $(function(){
   if (navigator.appName == 'Microsoft Internet Explorer') {
     var ua = navigator.userAgent;
@@ -156,6 +156,40 @@ $(function() {
     $.magnificPopup.close();
   });
 
+  function done (data) {
+    alert(data);
+  }
+
+  var maxSize = 5;
+  Dropzone.autoDiscover = false;
+  $("#dropzone").dropzone({
+    url: "index.html",
+    paramName: "file", // The name that will be used to transfer the file
+    maxFilesize: maxSize, // MB
+    maxFiles: 1,
+    uploadMultiple: false,
+    maxFiles: 1,
+    accept: function(file, done) {
+      done();
+    },
+    init: function() {
+      this.on("maxfilesexceeded", function(file) {
+            this.removeAllFiles();
+            this.addFile(file);
+      });
+      this.on("addedfile", function(file) {
+      if (file.size > maxSize*1024000){
+          alert('Файл слишком большой. Максимальный размер 5Mb.')
+          this.removeAllFiles();
+        }
+      });
+
+
+    }
+  });
+
+
+  
 });
 
 
