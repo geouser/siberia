@@ -173,6 +173,8 @@ $(function() {
 
       myDropzone.on("complete", function(file, responseText) {
         $.magnificPopup.close();
+        $('.open-callback').click();
+        console.log(responseText);
         this.removeAllFiles();
         $('form').each(function(index, el) {
           $(this)[0].reset();
@@ -182,7 +184,6 @@ $(function() {
 
     } // init end
   }); // dropzone end
-
 
   function googleMap_initialize() {
 
