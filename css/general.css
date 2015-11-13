@@ -231,7 +231,14 @@ header                     {
                                color: #FFF;
                                text-decoration: none;
                                margin-right: 40px;
+                               border-bottom: 2px solid transparent;
+                               -webkit-transition: all .2s;
+                                  -moz-transition: all .2s;
+                                   -ms-transition: all .2s;
+                                    -o-transition: all .2s;
+                                       transition: all .2s;
                            }
+.offer nav li a:hover      {  border-bottom: 2px solid #fff;}
 .offer nav button          {
                                height: 35px;
                                padding: 0 20px;
@@ -262,6 +269,7 @@ header                     {
                            }
 
 @media (max-width: 1160px) {
+    .offer                 {    background-position: 38% 50%;}
     .logo                  {    width: 29%;}
     .offer nav             {    width: 70%;}
     .offer h1              {    width: 80%;}
@@ -272,7 +280,6 @@ header                     {
     .offer nav li a        {    margin-right: 10px;}
 }
 @media (max-width: 700px) {
-    .offer                 {    background-position: 38% 50%;}
     .offer nav li a        {    margin: 0 0 0 30px;}
     .offer nav button      {    margin-top: 10px; display: block; float: right;}
     .offer h1              {    font-size: 38px;}
@@ -332,6 +339,8 @@ header                     {
 .products                  {
                                padding: 70px 0;
                                background: #F4F4F4;
+                               width: 100%;
+                               display: block;
                            }
 .products h3               {    color: #B6B6B6 }
 .product                   {
@@ -410,11 +419,15 @@ header                     {
 @media (max-width: 1100px) {
     .product               {    background: #34B5E5 !important; color: #FFF !important;}
     .product:hover         {    background: #34B5E5 !important;}
-    .product .grayscale  {
+    .product .grayscale    {
                                -webkit-filter: grayscale(0) !important;
                                filter: grayscale(0) !important;
                                opacity: 1 !important;
-                            }
+                          }
+    .product.white        {
+                               background: #fff !important;
+                               color: #000 !important;
+                          }
 }
 @media (max-width: 1000px) {
     .product              {     width: 350px; height: 200px; padding: 20px 5px; margin: 20px 10px 0 0;}
