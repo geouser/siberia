@@ -5,35 +5,41 @@
 #   Main JS for ____________   #
 #############################
 */
-(function($){
-        $(window).load(function(){
-            $("#my-thumbs-list").mThumbnailScroller({
-              axis:"x",
-              type:"hover-precise"
-            });
+(function($){ // slider clients list
+    $(window).load(function(){
+        $("#my-thumbs-list").mThumbnailScroller({
+          axis:"x",
+          type:"hover-precise"
         });
-    })(jQuery);
+    });
+})(jQuery);
+
 
 jQuery(document).ready(function($) {
 
 $('.clients-slider ul img').addClass('grayscale');
 
-$(".offer-slider").slick({
-  autoplay: true,
-  fade: true
-});
-
-$('.product').click(function(){
-  $(this).children('.dowloadProduct').css('top', '0');
-});
-$('.dowloadProduct').mouseover(function(){
-  $(this).css('top', '0%');
-});
-$('.dowloadProduct').mouseout(function(){
-  $(this).css('top', '200%');
-});
-
 $(function() {
+  $(".offer-slider").slick({
+    autoplay: true,
+    fade: true
+  });
+});
+
+$(function() { // banner on hover
+  $('.product-info').mouseover(function(){
+    $(this).parent().children('.dowloadProduct').css('top', '0');
+  });
+  $('.dowloadProduct').mouseover(function(){
+    $(this).css('top', '0%');
+  });
+  $('.dowloadProduct').mouseout(function(){
+    $(this).css('top', '200%');
+  });
+});
+
+
+$(function() { // scroll to anchor
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
@@ -51,6 +57,7 @@ $(function() {
 
 
 /*-----------------------------------------------------------------*/  
+$(function() { 
   $('.magnific').magnificPopup({
     type: 'inline',
 
@@ -67,6 +74,7 @@ $(function() {
     removalDelay: 300,
     mainClass: 'my-mfp-slide-bottom'
   });
+});
 
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
@@ -81,6 +89,7 @@ $(function() {
   var uploadedFile;
   Dropzone.autoDiscover = false;
 
+$(function() {  // drag and drop 
   $("#dropzone").dropzone({
     url: "forms.php",
     paramName: "file", // The name that will be used to transfer the file
@@ -135,6 +144,8 @@ $(function() {
 
     } // init end
   }); // dropzone end
+});
+
 
   function googleMap_initialize() {
 

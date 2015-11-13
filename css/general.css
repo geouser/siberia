@@ -569,8 +569,16 @@ footer .wrapper           { text-align: left;}
                             color: #fff;
                             font: 15px 'open_sanslight';
                             margin-top: 15px;}
-.footer-info p a          { color: #00bff3; text-decoration: underline;}
-.footer-info p img        { margin-top: 5px;}
+.footer-info p a          { color: #00bff3; text-decoration: underline;
+                            -webkit-transition: all .2s;
+                               -moz-transition: all .2s;
+                                -ms-transition: all .2s;
+                                 -o-transition: all .2s;
+                                    transition: all .2s;
+                          }
+.footer-info p a:hover    { color: #E8574C;}
+.footer-info p a img        { margin-top: 5px;}
+.footer-info p a:hover img  { opacity: .5;}
 .footer-info .social      { float: right; margin-top: 15px;}
 
 .copy p                   { color: #535c65; font: 13px 'open_sanssemibold';}
