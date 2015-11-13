@@ -185,12 +185,6 @@ filter: grayscale(0);
    Offer
    -------------------------------------- */
 .offer                     {
-                               background-image: url(../images/offerBg.jpg);
-                               background-repeat: no-repeat;
-                               background-position: 50% 50%;
-                               -webkit-background-size: cover;
-                               -o-background-size: cover;
-                               background-size: cover;
                                height: 100vh;
                                position: relative;
                                text-align: center;
@@ -207,6 +201,26 @@ filter: grayscale(0);
                                background: rgba(0,0,0, .35);
                                z-index: -1;
                            }
+.offer-slider               {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+z-index: -1;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+    height: 100%;  width: 100%;
+}
+.offer-slider .slide    {
+    background-image: url("../images/offerBg.jpg");
+    height: 100%;  width: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
 header                     {
                                position: absolute;
                                top: 0;
@@ -269,7 +283,7 @@ header                     {
                            }
 
 @media (max-width: 1160px) {
-    .offer                 {    background-position: 38% 50%;}
+    .offer-slider .slide   {    background-position: 35% 50%;}
     .logo                  {    width: 29%;}
     .offer nav             {    width: 70%;}
     .offer h1              {    width: 80%;}

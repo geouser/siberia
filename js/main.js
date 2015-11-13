@@ -72,6 +72,11 @@ jQuery(document).ready(function($) {
 
 $('.clients-slider ul img').addClass('grayscale');
 
+$(".offer-slider").slick({
+  autoplay: true,
+  fade: true
+});
+
 $('.product').click(function(){
   $(this).children('.dowloadProduct').css('top', '0');
 });
