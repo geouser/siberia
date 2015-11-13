@@ -502,7 +502,12 @@ header                     {
 
 
 .contacts .map            { height: 400px; background-color: #ccc;}
-
+a[href^="http://maps.google.com/maps"] {display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc                           {display:none;}
+.gmnoprint div                         {background:none !important;}
 
 
 .contacts .lang           { text-align: center;
@@ -521,6 +526,7 @@ header                     {
    .contacts h2           { font-size: 28px;}
    .contacts .right p,
    .contacts .right address {font-size: 16px; line-height: 24px;}
+   .contacts .map         { height: 300px;}
 }
 @media (max-width: 800px) {
    .contacts .left        { font-size: 14px;}
@@ -535,6 +541,7 @@ header                     {
    .contacts .right p,
    .contacts .right address {font-size: 16px; line-height: 26px;}
    .contacts h2           { margin-bottom: 10px;}
+   .contacts .map         { height: 200px;}
 }
 /* --------------------------------------
    footer
@@ -614,17 +621,24 @@ footer .wrapper           { text-align: left;}
                                        height: 33px;
                                        margin-bottom: 15px;
                                        background: transparent;
+                                       padding-left: 8px;
+                                       font: 14px 'open_sanslight';
+                                       color: #fff
                                    }
 #modal-popup textarea              {
                                        background: transparent;
                                        border: 1px solid #7F8994;
                                        width: 100%;
                                        height: 130px;
-                                       resize: none
+                                       resize: none;
+                                       padding: 8px 8px 0;
+                                       font: 14px 'open_sanslight';
+                                       color: #fff;
                                    }
 #modal-popup #dropzone             { text-align: center; margin-top: 24px; width: 30%; float: right; height: 130px; border: 1px dotted #7F8994;}
 .dropzone .dz-message span         { font: 11px 'open_sansregular'; color: #535b65; display: inline-block;}
 .dropzone .dz-message img          { display: block; margin: 0 auto 10px;}
+.dropzone .dz-message > *          { cursor: pointer;}
 .dropzone .dz-preview.dz-image-preview {background: transparent;}
 
 
@@ -647,3 +661,20 @@ footer .wrapper           { text-align: left;}
                                        font: 14px 'open_sanslight';
                                        border: none;
                                    }
+
+@media (max-width: 800px) {
+  #modal-popup                      { width: 100%; padding: 5%;}
+}
+
+@media (max-width: 560px) {
+  #modal-popup form > div:nth-child(1) { width: 100% }
+  #modal-popup form > div:nth-child(2) { width: 100%; margin-right: 0%;}
+  #modal-popup form > div:nth-child(3) { width: 100% }
+  #modal-popup form > div:nth-child(4) { width: 100% }
+  #modal-popup #dropzone               { float: none; width: 100%;}
+  #modal-popup p br                    { display: none;}
+}
+
+@media (max-width: 400px) {
+  #modal-popup h2                      { font-size: 25px; margin-top: 15px;}
+}

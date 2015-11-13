@@ -218,14 +218,33 @@ $(function() {
   }); // dropzone end
 
 
-  /*$('form').on('submit', function(event) {
-    event.preventDefault();
+  function googleMap_initialize() {
 
+      var mapCenterCoord = new google.maps.LatLng(56.011893, 92.873528);
+      var mapMarkerCoord = new google.maps.LatLng(56.011893, 92.873528);
 
-    var data = $(this).serialize();
-    console.log(data);
-    console.log(uploadedFile);
-  });*/
+      var mapOptions = {
+        center: mapCenterCoord,
+        zoom: 17,
+        //draggable: false,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var markerImage = new google.maps.MarkerImage('images/blue-marker.svg');
+      var marker = new google.maps.Marker({
+        icon: markerImage,
+        position: mapMarkerCoord, 
+        map: map,
+        title:"Siberian Wild Apps"
+      });
+      $(window).resize(function (){
+        map.setCenter(mapCenterCoord);
+      });
+  };
+  googleMap_initialize();
 
 
   
