@@ -66,10 +66,10 @@ $('.responsive').slick({
   dots: false,
   autoplay: true,
   infinite: false,
-  speed: 12000,
-  arrows: false,
+  speed: 3000,
+  arrows: true,
   pauseOnHover: true,
-  autoplaySpeed: 1,
+  autoplaySpeed: 5000,
   slidesToShow: 12,
   slidesToScroll: 4,
   cssEase: 'linear',
@@ -92,15 +92,15 @@ $('.responsive').slick({
     {
       breakpoint: 850,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToShow: 4,
+        slidesToScroll: 2
       }
     },
     {
       breakpoint: 550,
       settings: {
-        slidesToShow: 6,
-        slidesToScroll: 6
+        slidesToShow: 4,
+        slidesToScroll: 4
       }
     }
   ]
