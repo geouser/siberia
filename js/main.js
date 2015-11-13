@@ -70,53 +70,7 @@ $(function(){
 
 jQuery(document).ready(function($) {
 
-<<<<<<< HEAD
 
-=======
-$('.responsive').slick({
-  dots: false,
-  autoplay: true,
-  infinite: false,
-  speed: 3000,
-  arrows: true,
-  pauseOnHover: true,
-  autoplaySpeed: 5000,
-  slidesToShow: 12,
-  slidesToScroll: 4,
-  cssEase: 'linear',
-  responsive: [
-    {
-      breakpoint: 1400,
-      settings: {
-        slidesToShow: 8,
-        slidesToScroll: 3,
-        infinite: true,
-      }
-    },
-    {
-      breakpoint: 1100,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 850,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 550,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4
-      }
-    }
-  ]
-});
->>>>>>> aefabc450ffe64061e8da4406697cf79c2769d0b
 
 $('.product').click(function(){
   $(this).children('.dowloadProduct').css('top', '0');
