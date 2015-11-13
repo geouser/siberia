@@ -272,6 +272,7 @@ header                     {
     .offer nav li a        {    margin-right: 10px;}
 }
 @media (max-width: 700px) {
+    .offer                 {    background-position: 38% 50%;}
     .offer nav li a        {    margin: 0 0 0 30px;}
     .offer nav button      {    margin-top: 10px; display: block; float: right;}
     .offer h1              {    font-size: 38px;}
@@ -282,7 +283,13 @@ header                     {
     .offer nav             {    width: 100%; text-align: center;}
     .offer nav li a        {    margin: 0 0 0 10px;}
     .offer nav li:nth-child(1) a {margin-left: 0;}
-    .offer nav button      {    border: 1px solid #fff; float: none; display: inline-block; margin: 0 0 0 5px; padding: 0 5px;}
+    .offer nav button      {    border: 1px solid #fff; float: none; display: inline-block; margin: 0 0 0 5px; padding: 0 5px;
+                                position: absolute; bottom: -75vh;
+                                width: 50%;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                          }
     .offer h1              {    width: 90%;}
     .logo                  {    width: 50%; margin-bottom: 10px;}
 }
@@ -290,8 +297,8 @@ header                     {
 @media (max-width: 400px) {
     .offer nav li a        {    font-size: 16px; margin: 0 5px; font-family: 'open_sanslight'; font-weight: 700;}
     .offer nav li:nth-child(1) a {margin: 0 5px;}
-    .offer nav button      {    margin-top: 10px; padding: 0 10px; font-family: 'open_sanslight'; font-weight: 700;}
-    .offer h1              {    font-size: 28px; padding-top: 40px;}
+    .offer nav button      {    margin-top: 10px; padding: 0 10px; font-family: 'open_sanslight'; font-weight: 700; width: 60%; background: #FFF; color: #253D59;}
+    .offer h1              {    font-size: 28px; padding-top: 20px;}
 }
 
 /* --------------------------------------
@@ -350,7 +357,7 @@ header                     {
                                display: inline-block;
                                vertical-align: middle;
                            }
-.product img               {    margin-right: 20px }
+.product img               {    margin-right: 20px; max-width: 135px; }
 .product span              {
                                font: 21px 'open_sanssemibold';
                                width: 235px;
@@ -384,6 +391,7 @@ header                     {
                                left: 0;
                                width: 100%;
                                height: 100%;
+                               cursor: auto;
                                background: rgba(0,0,0, .7);
                                padding: 20px;
                                -webkit-transition: all .3s;
@@ -395,8 +403,9 @@ header                     {
 .dowloadProduct a          {
                                display: block;
                                margin: 12px auto;
+                               width: 160px;
                            }
-.dowloadProduct a img      {    margin: 0 }
+.dowloadProduct a img      {    margin: 0; max-width: 100%; }
 
 @media (max-width: 1100px) {
     .product               {    background: #34B5E5 !important; color: #FFF !important;}
@@ -411,6 +420,7 @@ header                     {
     .product              {     width: 350px; height: 200px; padding: 20px 5px; margin: 20px 10px 0 0;}
     .product span         {     width: 180px; font-size: 18px;}
     .product img          {     max-width: 120px;}
+    .dowloadProduct       {     padding: 5px;}
 }
 @media (max-width: 760px) {
     .products             {     padding: 40px 0;}
@@ -421,7 +431,6 @@ header                     {
     .product span         {     width: 180px; font-size: 18px;}
     .product img          {     max-width: 120px;}
     .product .dowloadProduct img   {     max-width: 160px;}
-    .dowloadProduct       {     padding: 5px;}
 }
 @media (max-width: 400px) {
     .product              {     width: 100%;}
@@ -531,7 +540,9 @@ footer .wrapper           { text-align: left;}
 
 .copy p                   { color: #535c65; font: 13px 'open_sanssemibold';}
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
+   .footer-info .social   { float: none;}
+   .footer-info           { margin-bottom: 20px;}
    .footer-info p         { width: 100%;}
 }
 
